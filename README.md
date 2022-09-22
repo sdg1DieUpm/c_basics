@@ -1,4 +1,7 @@
 # SDG1
+La explicación de todos los códigos está en los vídeos de la lista de reproducción de la asignatura. Puedes acceder pinchando en la imagen:
+[![Conceptos básicos de C](https://github.com/josueportiz/c_basics/blob/assets/images/video_list.jpg?raw=true)](https://youtube.com/playlist?list=PLTFFovUxjNnn19myGVw1kwh6GPbRxwIcC "Conceptos básicos de C")
+
 Esta es la estructura de los proyectos de SDG1 para **compilación nativa** usando VSCode.
 La diferencia fundamental con la estructura de los proyectos para SDG2 es que **no contiene** las carpetas `drivers` y `port`.
 
