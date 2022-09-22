@@ -1,3 +1,13 @@
+/**
+ * @file otras_directivas.c
+ * @brief Code example to learn how to use less common pre-compile directive.
+ *
+ * This code focuses on the use of `#undef`, and `#error`. It also works with directives such as `#ifdef` or `#if`.
+ *
+ * @author Josué Pagán <j.pagan@upm.es>
+ * @date 2022-09-11 
+ *  
+ */
 /* INCLUDES DEL SISTEMA */
 #include <stdio.h>
 
