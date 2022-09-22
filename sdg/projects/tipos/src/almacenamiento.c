@@ -16,7 +16,7 @@ static int32_t g_var_almacenamiento = 33; // No accesible desde el exterior (e.g
 /**
  * @brief Function to return the value of a global static variable.
  * 
- * @return int32_t the value of the global static variable.
+ * @return Value of the global static variable `g_var_almacenamiento`.
  */
 int32_t funcion_get(){
     return g_var_almacenamiento;
@@ -25,7 +25,7 @@ int32_t funcion_get(){
 /**
  * @brief Function to set the value of a global static variable.
  * 
- * @param[in] valor The value of the global static variable.
+ * @param valor The value of the global static variable.
  */
 void funcion_set(int32_t valor){
     g_var_almacenamiento = valor;
