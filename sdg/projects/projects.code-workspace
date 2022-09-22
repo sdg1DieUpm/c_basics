@@ -4,10 +4,13 @@
 			"path": "hello"
 		},
 		{
+			"path": "tipos"
+		},
+		{
 			"path": "javaVSc"
 		},
 		{
-			"path": "tipos"
+			"path": "precompilador"
 		}
 	],
 	"settings": {
