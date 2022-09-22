@@ -36,9 +36,6 @@ enum CLIMA {
     LLUVIOSO /*!< Showers */
 };
 
-/** array of chars containing the names of the different weather situations. **/
-char *nombres_climas[3] = {"SOLEADO", "NUBLADO", "LLUVIOSO"};
-
 /* DECLARACION DE NUEVOS TIPOS */	
 
 
