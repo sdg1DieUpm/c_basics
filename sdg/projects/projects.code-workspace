@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "hello"
+		},
+		{
+			"path": "javaVSc"
+		},
+		{
+			"path": "tipos"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"complex.h": "c",
+			"stdint.h": "c"
+		}
+	}
+}
