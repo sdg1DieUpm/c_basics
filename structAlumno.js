@@ -1,5 +1,5 @@
 var structAlumno =
 [
-    [ "nombre", "structAlumno.html#ae572d042078d0f167eca7bdccf6c192b", null ],
-    [ "notas", "structAlumno.html#abac4bb47be68be60104d37035afc9ab3", null ]
+    [ "nombre", "structAlumno.html#ad17a1fa9936688d7bd0bed70ab7ca9db", null ],
+    [ "notas", "structAlumno.html#a9e00047efa5a0b9871abd9c57a86f0ef", null ]
 ];

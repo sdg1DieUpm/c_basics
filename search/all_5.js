@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['main_26',['main',['../hello_2src_2main_8c.html#a196718f834091385d38586a0ce4009dc',1,'main():&#160;main.c'],['../javaVSc_2src_2main_8c.html#a196718f834091385d38586a0ce4009dc',1,'main():&#160;main.c'],['../tipos_2src_2main_8c.html#a196718f834091385d38586a0ce4009dc',1,'main():&#160;main.c']]],
-  ['main_2ec_27',['main.c',['../hello_2src_2main_8c.html',1,'(Global Namespace)'],['../javaVSc_2src_2main_8c.html',1,'(Global Namespace)'],['../tipos_2src_2main_8c.html',1,'(Global Namespace)']]]
+  ['fr_43',['FR',['../otras__directivas_8h.html#ad937567dd62f7f5abfa1724f07ae6094',1,'otras_directivas.h']]],
+  ['funcion_5factualiza_5fnumero_44',['funcion_actualiza_numero',['../almacenamiento_8h.html#a77f63766a218932a75b1a2ba5e09c6b7',1,'funcion_actualiza_numero(void):&#160;almacenamiento.c'],['../almacenamiento_8c.html#aad9bc2d4995c4878507fa6142800bb1c',1,'funcion_actualiza_numero():&#160;almacenamiento.c']]],
+  ['funcion_5fget_45',['funcion_get',['../almacenamiento_8h.html#a4728d782b693f244088e3fa1772cede2',1,'funcion_get(void):&#160;almacenamiento.c'],['../almacenamiento_8c.html#a9b050a82135db04ba4ce0535f216508b',1,'funcion_get():&#160;almacenamiento.c']]],
+  ['funcion_5fset_46',['funcion_set',['../almacenamiento_8h.html#a3f9c89c9748409575382c6762ac5b646',1,'funcion_set(int32_t valor):&#160;almacenamiento.c'],['../almacenamiento_8c.html#a3f9c89c9748409575382c6762ac5b646',1,'funcion_set(int32_t valor):&#160;almacenamiento.c']]]
 ];

@@ -8,6 +8,5 @@ var bloques__control_8h =
       [ "LLUVIOSO", "bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20a8137c2bb0f69a6bcaaa7d3874a965935", null ]
     ] ],
     [ "explica_bloques_condicionales", "bloques__control_8h.html#aa5a303f8752ac1bf1071ff81c5a5c692", null ],
-    [ "explica_bucles", "bloques__control_8h.html#a6ee207ab10a4a546458b91eb4e7c09f2", null ],
-    [ "nombres_climas", "bloques__control_8h.html#a7c16effe0123fd657bd4c99348859002", null ]
+    [ "explica_bucles", "bloques__control_8h.html#a6ee207ab10a4a546458b91eb4e7c09f2", null ]
 ];

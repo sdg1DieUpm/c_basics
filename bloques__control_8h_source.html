@@ -87,39 +87,42 @@ $(document).ready(function(){initNavTree('bloques__control_8h_source.html',''); 
 </div><!--header-->
 <div class="contents">
 <a href="bloques__control_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef BLOQUES_CONTROL_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define BLOQUES_CONTROL_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* INCLUDES DEL SISTEMA */</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/* INCLUDES PROPIOS */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* DEFINES Y ENUMS */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define TEMPERATURA_CONFORT_HIGH 27.0</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define TEMPERATURA_CONFORT_LOW 10.5</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">enum</span> CLIMA {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    SOLEADO,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    NUBLADO,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    LLUVIOSO</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">char</span> *nombres_climas[3] = {<span class="stringliteral">&quot;SOLEADO&quot;</span>, <span class="stringliteral">&quot;NUBLADO&quot;</span>, <span class="stringliteral">&quot;LLUVIOSO&quot;</span>};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/* DECLARACION DE NUEVOS TIPOS */</span>   </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef BLOQUES_CONTROL_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define BLOQUES_CONTROL_H_</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* INCLUDES DEL SISTEMA */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/* INCLUDES PROPIOS */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/* DEFINES Y ENUMS */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="bloques__control_8h.html#a67e3c592be977b10493e97331e57c123">   29</a></span>&#160;<span class="preprocessor">#define TEMPERATURA_CONFORT_HIGH 27.0</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="bloques__control_8h.html#a79b1d47017e8f5d30fed22f85421a79e">   30</a></span>&#160;<span class="preprocessor">#define TEMPERATURA_CONFORT_LOW 10.5</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/* PROTOTIPO DE FUNCIONES */</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bloques__control_8h.html#a6ee207ab10a4a546458b91eb4e7c09f2">explica_bucles</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bloques__control_8h.html#aa5a303f8752ac1bf1071ff81c5a5c692">explica_bloques_condicionales</a>(<span class="keywordtype">float</span> temp, int8_t cli);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20">   33</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20">CLIMA</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20a6e507e451f83887636012382d79d279b">   34</a></span>&#160;    <a class="code" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20a6e507e451f83887636012382d79d279b">SOLEADO</a>, </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20abbe866b8ccd686f4b06c2b383ad343d5">   35</a></span>&#160;    <a class="code" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20abbe866b8ccd686f4b06c2b383ad343d5">NUBLADO</a>, </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20a8137c2bb0f69a6bcaaa7d3874a965935">   36</a></span>&#160;    <a class="code" href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20a8137c2bb0f69a6bcaaa7d3874a965935">LLUVIOSO</a> </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/* DECLARACION DE NUEVOS TIPOS */</span>   </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/* PROTOTIPO DE FUNCIONES */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bloques__control_8h.html#a6ee207ab10a4a546458b91eb4e7c09f2">explica_bucles</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bloques__control_8h.html#aa5a303f8752ac1bf1071ff81c5a5c692">explica_bloques_condicionales</a>(<span class="keywordtype">float</span> temp, int8_t cli);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="abloques__control_8h_html_aa5a303f8752ac1bf1071ff81c5a5c692"><div class="ttname"><a href="bloques__control_8h.html#aa5a303f8752ac1bf1071ff81c5a5c692">explica_bloques_condicionales</a></div><div class="ttdeci">void explica_bloques_condicionales(float temp, int8_t cli)</div><div class="ttdoc">Function to explain the use of the conditional blocks (if, switch) in C.</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8c_source.html#l00018">bloques_control.c:18</a></div></div>
-<div class="ttc" id="abloques__control_8h_html_a6ee207ab10a4a546458b91eb4e7c09f2"><div class="ttname"><a href="bloques__control_8h.html#a6ee207ab10a4a546458b91eb4e7c09f2">explica_bucles</a></div><div class="ttdeci">void explica_bucles(void)</div><div class="ttdoc">Function to explain the use of the loops (for, while, do while) in C.</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8c_source.html#l00067">bloques_control.c:67</a></div></div>
+<div class="ttc" id="abloques__control_8h_html_a5280e2cdbd09139c0e72a5a8ae733e20abbe866b8ccd686f4b06c2b383ad343d5"><div class="ttname"><a href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20abbe866b8ccd686f4b06c2b383ad343d5">NUBLADO</a></div><div class="ttdeci">@ NUBLADO</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8h_source.html#l00035">bloques_control.h:35</a></div></div>
+<div class="ttc" id="abloques__control_8h_html_aa5a303f8752ac1bf1071ff81c5a5c692"><div class="ttname"><a href="bloques__control_8h.html#aa5a303f8752ac1bf1071ff81c5a5c692">explica_bloques_condicionales</a></div><div class="ttdeci">void explica_bloques_condicionales(float temp, int8_t cli)</div><div class="ttdoc">Function to explain the use of the conditional blocks (if, switch) in C.</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8c_source.html#l00021">bloques_control.c:21</a></div></div>
+<div class="ttc" id="abloques__control_8h_html_a5280e2cdbd09139c0e72a5a8ae733e20a6e507e451f83887636012382d79d279b"><div class="ttname"><a href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20a6e507e451f83887636012382d79d279b">SOLEADO</a></div><div class="ttdeci">@ SOLEADO</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8h_source.html#l00034">bloques_control.h:34</a></div></div>
+<div class="ttc" id="abloques__control_8h_html_a5280e2cdbd09139c0e72a5a8ae733e20"><div class="ttname"><a href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20">CLIMA</a></div><div class="ttdeci">CLIMA</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8h_source.html#l00033">bloques_control.h:33</a></div></div>
+<div class="ttc" id="abloques__control_8h_html_a5280e2cdbd09139c0e72a5a8ae733e20a8137c2bb0f69a6bcaaa7d3874a965935"><div class="ttname"><a href="bloques__control_8h.html#a5280e2cdbd09139c0e72a5a8ae733e20a8137c2bb0f69a6bcaaa7d3874a965935">LLUVIOSO</a></div><div class="ttdeci">@ LLUVIOSO</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8h_source.html#l00036">bloques_control.h:36</a></div></div>
+<div class="ttc" id="abloques__control_8h_html_a6ee207ab10a4a546458b91eb4e7c09f2"><div class="ttname"><a href="bloques__control_8h.html#a6ee207ab10a4a546458b91eb4e7c09f2">explica_bucles</a></div><div class="ttdeci">void explica_bucles(void)</div><div class="ttdoc">Function to explain the use of the loops (for, while, do while) in C.</div><div class="ttdef"><b>Definition:</b> <a href="bloques__control_8c_source.html#l00070">bloques_control.c:70</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

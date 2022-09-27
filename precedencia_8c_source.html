@@ -150,13 +150,13 @@ $(document).ready(function(){initNavTree('precedencia_8c_source.html',''); initR
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span> (int32_t i=0; i&lt;8; i++){</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        x &gt;&gt;= 1;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (x &amp; MASCARA_BINARIA){ <span class="comment">// Si el producto es distinto de 0...</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            printf(<span class="stringliteral">&quot;\tEl producto bit a bit de x con la MASCARA_BINARIA es distinto de 0, y vale %d (0x%x)\n&quot;</span>, x &amp;MASCARA_BINARIA, x &amp; MASCARA_BINARIA);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (x &amp; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>){ <span class="comment">// Si el producto es distinto de 0...</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            printf(<span class="stringliteral">&quot;\tEl producto bit a bit de x con la MASCARA_BINARIA es distinto de 0, y vale %d (0x%x)\n&quot;</span>, x &amp;<a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>, x &amp; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }        </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    printf(<span class="stringliteral">&quot;\nSuma binaria (OR, |), para activar (poner a 1) 1 o varios bits de una variable, segun una mascara:\n&quot;</span>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    x |= (MASCARA_BINARIA&lt;&lt;1); <span class="comment">// OR y asignacion sobre X</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    x |= (<a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>&lt;&lt;1); <span class="comment">// OR y asignacion sobre X</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    printf(<span class="stringliteral">&quot;\tDesplazo la mascara y se la sumo a x, que ahora vale: x |= (MASCARA_BINARIA&lt;&lt;1) =&gt; x=%d (0x%x)\n&quot;</span>, x, x);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    printf(<span class="stringliteral">&quot;\nProducto con la inversa de una mascara (AND ~, &amp; ~ --&gt; ALTGR+4), para limpiar (poner a 0) los bits de una variable que me indique una mascara (u otra variable):\n&quot;</span>);</div>
@@ -184,13 +184,13 @@ $(document).ready(function(){initNavTree('precedencia_8c_source.html',''); initR
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    printf(<span class="stringliteral">&quot;\tEl operador negacion logica \&quot;!\&quot; invierte el valor de una condicion (true a false, y viceversa).\n&quot;</span>);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    printf(<span class="stringliteral">&quot;\tNo hay que confundir \&quot;negacion logica\&quot; (\&quot;!\&quot;) con \&quot;inverso de\&quot; (\&quot;~\&quot;).\n&quot;</span>);    </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> ((x &gt; MASCARA_BINARIA) &amp;&amp; (y &gt; MASCARA_BINARIA)){</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> ((x &gt; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>) &amp;&amp; (y &gt; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>)){</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        printf(<span class="stringliteral">&quot;\t\&quot;x\&quot; es mayor que MASCARA_BINARIA, y también \&quot;y\&quot; es mayor que MASCARA_BINARIA.\n&quot;</span>);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((x &gt; MASCARA_BINARIA) | (y &gt; MASCARA_BINARIA)){</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((x &gt; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>) | (y &gt; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>)){</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        printf(<span class="stringliteral">&quot;\t\&quot;x\&quot;, \&quot;y\&quot;, o ambos valores es mayor que MASCARA_BINARIA.\n&quot;</span>);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    } </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((x &gt; MASCARA_BINARIA) &amp;&amp; !(y &gt; MASCARA_BINARIA)){</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((x &gt; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>) &amp;&amp; !(y &gt; <a class="code" href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a>)){</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        printf(<span class="stringliteral">&quot;\t\&quot;x\&quot; es mayor que MASCARA_BINARIA, e \&quot;y\&quot; NO es mayor que MASCARA_BINARIA.\n&quot;</span>);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">else</span> {</div>
@@ -199,6 +199,7 @@ $(document).ready(function(){initNavTree('precedencia_8c_source.html',''); initR
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aprecedencia_8h_html_ab4e025dbc497e9df1f4c35d1d10946b3"><div class="ttname"><a href="precedencia_8h.html#ab4e025dbc497e9df1f4c35d1d10946b3">MASCARA_BINARIA</a></div><div class="ttdeci">#define MASCARA_BINARIA</div><div class="ttdoc">Macro that defines a mask to work with binary operators.</div><div class="ttdef"><b>Definition:</b> <a href="precedencia_8h_source.html#l00024">precedencia.h:24</a></div></div>
 <div class="ttc" id="aprecedencia_8c_html_af70d3cf6a0811f3a6a20c8cc36f0a008"><div class="ttname"><a href="precedencia_8c.html#af70d3cf6a0811f3a6a20c8cc36f0a008">explica_precedencia</a></div><div class="ttdeci">void explica_precedencia()</div><div class="ttdoc">Function to explain the use of the rules of precedence and operators in C.</div><div class="ttdef"><b>Definition:</b> <a href="precedencia_8c_source.html#l00018">precedencia.c:18</a></div></div>
 <div class="ttc" id="aprecedencia_8h_html"><div class="ttname"><a href="precedencia_8h.html">precedencia.h</a></div><div class="ttdoc">Header file for the explanation the rules of precedence.</div></div>
 <!-- start footer part -->

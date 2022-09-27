@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['precedencia_2ec_52',['precedencia.c',['../precedencia_8c.html',1,'']]],
-  ['precedencia_2eh_53',['precedencia.h',['../precedencia_8h.html',1,'']]]
+  ['geometria_2ec_122',['geometria.c',['../geometria_8c.html',1,'']]],
+  ['geometria_2eh_123',['geometria.h',['../geometria_8h.html',1,'']]]
 ];
