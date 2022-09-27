@@ -38,7 +38,7 @@ int32_t var_externa = 0; // Definimos la variable global y le damos valor
 /**
  * @brief Main function of the project "tipos". Entry point of the program.
  * 
- * @return int32_t
+ * @return Result of the execution.
  */
 int32_t main()
 {		

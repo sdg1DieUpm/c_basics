@@ -5,6 +5,11 @@
  * @date 2022-09-11
  */
 
+/**
+ * @def E
+ * @brief Macro to represent the `e` number.
+ */
+
 #ifndef CUALIFICADORES_H_
 #define CUALIFICADORES_H_
 

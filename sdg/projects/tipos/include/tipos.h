@@ -17,18 +17,22 @@
 
 
 /* DEFINES Y ENUMS */
+/** enum type to define RGB colors. **/
 enum COLOR {
-	ROJO, VERDE, AZUL
+	ROJO, /*!< Red */
+	VERDE, /*!< Green */
+	AZUL /*!< Blue */
 };
 
+/** enum type to define the days of the week. **/
 enum DIA {
-		DOMINGO,
-		LUNES = 0,
-		MARTES, 
-		MIERCOLES=-1,
-		JUEVES,
-		VIERNES,
-		SABADO
+		DOMINGO, /*!< Sunday */
+		LUNES = 0, /*!< Monday */
+		MARTES, /*!< Tuesday */
+		MIERCOLES=-1, /*!< Wednesday */
+		JUEVES, /*!< Thursday */
+		VIERNES, /*!< Friday */
+		SABADO /*!< Saturday */
 	};
 
 /* DECLARACION DE NUEVOS TIPOS */
@@ -36,19 +40,14 @@ enum DIA {
 /**
  * @struct Alumno
  * @brief Struct type of a student.
- * 
- * @var Alumno::nombre
- * Array of chars to store student's name 
- * @var Alumno::notas
- * Array of ints to store student's grades 
  */
 /**
- * @struct alumno_t
+ * @typedef alumno_t
  * @brief Typedef of Alumno
  */
 typedef struct Alumno {
-	char nombre[20]; 
-	float notas[6]; // Array de 6 elementos
+	char nombre[20]; /*!< Array of chars to store student's name  */
+	float notas[6]; /*!< Array of ints to store student's grades  */
 } alumno_t;
 
 
@@ -57,20 +56,15 @@ typedef struct Alumno {
 /**
  * @union Alumno_u 
  * @brief Union type of a student.
- * 
- * @var Alumno_u::nombre
- * Array of chars to store student's name 
- * @var Alumno_u::notas
- * Array of ints to store student's grades 
  */
 /**
- * @union alumno_u
+ * @typedef alumno_u
  * @brief Typedef of Alumno_u
  */
 
 typedef union Alumno_u {
-    char nombre[20]; 
-  	float notas[6];  	// Array de 6 elementos	
+	char nombre[20]; /*!< Array of chars to store student's name  */
+	float notas[6]; /*!< Array of ints to store student's grades  */
 } alumno_u;	
 
 

@@ -5,6 +5,16 @@
  * @date 2022-09-11
  */
 
+/**
+ * @def TEMPERATURA_CONFORT_HIGH
+ * @brief Macro that defines the upper limit of comfortable temperatures.
+ */
+
+/**
+ * @def TEMPERATURA_CONFORT_LOW
+ * @brief Macro that defines the lower limit of comfortable temperatures.
+ */
+
 #ifndef BLOQUES_CONTROL_H_
 #define BLOQUES_CONTROL_H_
 
@@ -19,12 +29,12 @@
 #define TEMPERATURA_CONFORT_HIGH 27.0
 #define TEMPERATURA_CONFORT_LOW 10.5
 
+/** enum type to define the different weather situations. **/
 enum CLIMA {
-    SOLEADO,
-    NUBLADO,
-    LLUVIOSO
+    SOLEADO, /*!< Sunny */
+    NUBLADO, /*!< Cloudy */
+    LLUVIOSO /*!< Showers */
 };
-char *nombres_climas[3] = {"SOLEADO", "NUBLADO", "LLUVIOSO"};
 
 /* DECLARACION DE NUEVOS TIPOS */	
 

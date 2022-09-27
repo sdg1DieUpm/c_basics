@@ -31,7 +31,7 @@
 /**
  * @brief Main function of the project "javaVSc". Entry point of the program.
  * 
- * @return int32_t 
+ * @return Result of the execution.
  */
 int32_t main()
 {

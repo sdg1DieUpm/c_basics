@@ -11,6 +11,9 @@
 
 #include "bloques_control.h"
 
+/* VARIABLES GLOBALES */
+static const char *g_nombres_climas[3] = {"SOLEADO", "NUBLADO", "LLUVIOSO"}; // No accesible desde el exterior y es constante
+
 /**
  * @brief Function to explain the use of the conditional blocks (if, switch) in C.
  * 
@@ -25,15 +28,15 @@ void explica_bloques_condicionales(float temperatura, int8_t clima){
     }
     else {
         if ((clima == SOLEADO) && (temperatura <= TEMPERATURA_CONFORT_HIGH)){
-            printf("\tSAL A PASEAR. El clima es %s y la temperatura de %0.1fºC es buena.\n", nombres_climas[clima], temperatura);
+            printf("\tSAL A PASEAR. El clima es %s y la temperatura de %0.1fºC es buena.\n", g_nombres_climas[clima], temperatura);
         } 
-        else if ((clima == SOLEADO) && (temperatura > TEMPERATURA_CONFORT_HIGH)){
-            printf("\tQUEDATE EN CASA. Aunque el clima es %s, la temperatura es de %0.1fºC.\n", nombres_climas[clima], temperatura);
+        else if ((clima == SOLEADO) && (temperatura < TEMPERATURA_CONFORT_LOW)){
+            printf("\tQUEDATE EN CASA. Aunque el clima es %s, la temperatura es de %0.1fºC.\n", g_nombres_climas[clima], temperatura);
         } 
         else if ((clima == NUBLADO) || ((TEMPERATURA_CONFORT_LOW >= temperatura) && (temperatura < TEMPERATURA_CONFORT_HIGH))){
-            printf("\tSAL A PASEAR, O NO. El clima es %s y la temperatura de %0.1fºC, agradable.\n", nombres_climas[clima], temperatura);
+            printf("\tSAL A PASEAR, O NO. El clima es %s y la temperatura de %0.1fºC, agradable.\n", g_nombres_climas[clima], temperatura);
         } else {
-        printf("\tMAL TIEMPO. El clima es %s y la temperatura de %0.1fºC. Mejor quedarse en casa.\n", nombres_climas[clima], temperatura);
+            printf("\tMAL TIEMPO. El clima es %s y la temperatura de %0.1fºC. Mejor quedarse en casa.\n", g_nombres_climas[clima], temperatura);
         }
     }
 

@@ -5,6 +5,11 @@
  * @date 2022-09-11
  */
 
+/**
+ * @def MASCARA_BINARIA
+ * @brief Macro that defines a mask to work with binary operators.
+ */
+
 #ifndef PRECEDENCIA_H_
 #define PRECEDENCIA_H_
 
