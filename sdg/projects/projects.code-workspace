@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "precompilador"
+		},
+		{
+			"path": "arrayPunteros"
 		}
 	],
 	"settings": {

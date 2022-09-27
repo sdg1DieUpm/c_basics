@@ -1,2 +1,0 @@
-# Force to upload empty directory. We need this file to do so.
-!.gitignore
