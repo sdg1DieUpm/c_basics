@@ -10,7 +10,10 @@ var arrays_8h =
     [ "RGB_COLOR", "arrays_8h.html#a72f7be47410c630dc0dd54234e46ed52", [
       [ "RED", "arrays_8h.html#a72f7be47410c630dc0dd54234e46ed52af80f9a890089d211842d59625e561f88", null ],
       [ "GREEN", "arrays_8h.html#a72f7be47410c630dc0dd54234e46ed52aa60bd322f93178d68184e30e162571ca", null ],
-      [ "BLUE", "arrays_8h.html#a72f7be47410c630dc0dd54234e46ed52a35d6719cb4d7577c031b3d79057a1b79", null ]
+      [ "BLUE", "arrays_8h.html#a72f7be47410c630dc0dd54234e46ed52a35d6719cb4d7577c031b3d79057a1b79", null ],
+      [ "RED", "pantallas_8h.html#a72f7be47410c630dc0dd54234e46ed52af80f9a890089d211842d59625e561f88", null ],
+      [ "GREEN", "pantallas_8h.html#a72f7be47410c630dc0dd54234e46ed52aa60bd322f93178d68184e30e162571ca", null ],
+      [ "BLUE", "pantallas_8h.html#a72f7be47410c630dc0dd54234e46ed52a35d6719cb4d7577c031b3d79057a1b79", null ]
     ] ],
     [ "explica_arrays", "arrays_8h.html#a5937865ba267dd7cceb1064c3c6ead81", null ]
 ];

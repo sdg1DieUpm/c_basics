@@ -86,48 +86,88 @@ $(document).ready(function(){initNavTree('funciones_2src_2main_8c_source.html','
 <div class="title">main.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;pantallas.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;int32_t <a class="code" href="arrayPunteros_2src_2main_8c.html#a196718f834091385d38586a0ce4009dc">main</a>()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="structPantalla.html">pantalla_t</a> mi_pantalla; <span class="comment">// Declaro una pantalla</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    mi_pantalla.num_rows = <a class="code" href="arrays_8h.html#a6019a70994460a660283265dbd136282">NUM_ROWS</a>; <span class="comment">// Defino el tamano (numero de filas y columnas) de mi pantalla</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    mi_pantalla.num_cols = <a class="code" href="arrays_8h.html#a3aa3d4b4988bb6a5cfad5aefe92c207d">NUM_COLS</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    int32_t estado_inicializacion = INIT_FAIL; <span class="comment">// A priori, no sabemos si ira bien</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    estado_inicializacion = inicializa_pantalla(&amp;mi_pantalla);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//pantalla_t una_pantalla = inicializa_pantalla_2(mi_pantalla);</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//mi_pantalla = una_pantalla;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (estado_inicializacion == INIT_OK){</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        printf(<span class="stringliteral">&quot;\nLa pantalla se ha inicializado correctamente. Ilumino la pantalla.\n&quot;</span>);                       </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        ilumina_pantalla(&amp;mi_pantalla); </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">char</span> *marca = <span class="stringliteral">&quot;TelecoTV&quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        mi_pantalla.cajon_de_sastre = marca;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        printf(<span class="stringliteral">&quot;La marca de mi pantalla es: %s\n&quot;</span>, (<span class="keywordtype">char</span>*)mi_pantalla.cajon_de_sastre);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        printf(<span class="stringliteral">&quot;\nHa habido un error al inicializar la pantalla. Saliendo del programa...\n&quot;</span>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span>(-1);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> (0);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<a href="funciones_2src_2main_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* INCLUDES DEL SISTEMA */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* INCLUDES PROPIOS */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pantallas_8h.html">pantallas.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="funciones_2src_2main_8c.html#a196718f834091385d38586a0ce4009dc">   32</a></span>&#160;int32_t <a class="code" href="arrayPunteros_2src_2main_8c.html#a196718f834091385d38586a0ce4009dc">main</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="structPantalla.html">pantalla_t</a> mi_pantalla; <span class="comment">// Declaro una pantalla</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    mi_pantalla.<a class="code" href="structPantalla.html#a5a6d9e837d57a51839a9f8ea7076f827">num_rows</a> = <a class="code" href="arrays_8h.html#a6019a70994460a660283265dbd136282">NUM_ROWS</a>; <span class="comment">// Defino el tamano (numero de filas y columnas) de mi pantalla</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    mi_pantalla.<a class="code" href="structPantalla.html#a10aa7069c5a5006777815ca0796cd1ea">num_cols</a> = <a class="code" href="arrays_8h.html#a3aa3d4b4988bb6a5cfad5aefe92c207d">NUM_COLS</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    int32_t estado_inicializacion = <a class="code" href="pantallas_8h.html#aee7f19c176695a3a906e74cf28d95cd8">INIT_FAIL</a>; <span class="comment">// A priori, no sabemos si ira bien</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    printf(<span class="stringliteral">&quot;\n/* Paso de parametros por referencia */\n&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    printf(<span class="stringliteral">&quot;Cuando pasamos la referencia (la direccion de memoria) de nuestra variable, es porque queremos que la funcion haga cosas con \&quot;esa\&quot; variable, que esta en \&quot;esa\&quot; direccion de memoria. No queremos que trabaje con una copia de sus valores, sino que trabaje sobre su zona de memoria particularmente.\n&quot;</span>);  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    printf(<span class="stringliteral">&quot;Se manda la direccion de memoria (&amp;); si es un array, vale con su nombre, porque el nombre de un array es la direccion de memoria del array.\n&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    printf(<span class="stringliteral">&quot;En las funciones se recibe, claro, como un puntero. Si es una estructura lo que pasamos, a sus campos accedemos con \&quot;-&gt;\&quot; en vez de con \&quot;.\&quot;.\n&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    estado_inicializacion = <a class="code" href="pantallas_8h.html#a80c9bb20c3a685ee09d2b08016508b8b">inicializa_pantalla</a>(&amp;mi_pantalla);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    printf(<span class="stringliteral">&quot;Las funciones de inicializacion son muy comunes. Acostumbran a devolver un codigo de estado de como ha ido el proceso. Conviene recoger dicho valor y actuar en consecuencia; por ejemplo, si ha ido mal, saliendo del programa o avisando al usuario.\n&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (estado_inicializacion == <a class="code" href="pantallas_8h.html#aec712977c4e7bfb9ac1d8593a76e6090">INIT_OK</a>){</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        printf(<span class="stringliteral">&quot;\nLa pantalla se ha inicializado correctamente. Ilumino la pantalla.\n&quot;</span>);                       </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="pantallas_8h.html#a42c1d7f3eba60f3f0ea0c11dc499b837">ilumina_pantalla</a>(&amp;mi_pantalla); <span class="comment">// Paso por referencia</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">char</span> *marca = <span class="stringliteral">&quot;TelecoTV&quot;</span>;       </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        mi_pantalla.<a class="code" href="structPantalla.html#af2cd02f6ebcb741b2866b50562c4aca3">cajon_de_sastre</a> = marca;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// Hago cast de void* a puntero de caracteres (char*), y lo imprimo como string (%s): </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        printf(<span class="stringliteral">&quot;La marca de mi pantalla es: %s\n&quot;</span>, (<span class="keywordtype">char</span>*)(mi_pantalla.<a class="code" href="structPantalla.html#af2cd02f6ebcb741b2866b50562c4aca3">cajon_de_sastre</a>));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        int32_t id_pantalla = 12345678;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        mi_pantalla.<a class="code" href="structPantalla.html#af2cd02f6ebcb741b2866b50562c4aca3">cajon_de_sastre</a> = &amp;id_pantalla;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// Hago cast de void* a puntero de entero (int32_t*), luego cojo el valor donde apunta (*): </span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        printf(<span class="stringliteral">&quot;El ID de mi pantalla es: %d\n&quot;</span>, *(int32_t*)(mi_pantalla.<a class="code" href="structPantalla.html#af2cd02f6ebcb741b2866b50562c4aca3">cajon_de_sastre</a>)); </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        printf(<span class="stringliteral">&quot;\nHa habido un error al inicializar la pantalla. Saliendo del programa...\n&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span>(estado_inicializacion);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    printf(<span class="stringliteral">&quot;\n/* Paso de parametros por valor */\n&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    printf(<span class="stringliteral">&quot;Requiere de otras funciones que no esperen recibir un puntero a una direccion de memoria.\n&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    printf(<span class="stringliteral">&quot;Se pasa una copia igual a mi variable, los mismos valores, pero no es mi variable la que se va a usar.\n&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    printf(<span class="stringliteral">&quot;Requiere que devuelva los cambios realizados si quiero sobreescribirlos en mi variable.\n&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    printf(<span class="stringliteral">&quot;Descomentar estas lineas para ver su funcionamiento:\n&quot;</span>);   </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    pantalla_t una_pantalla = inicializa_pantalla_2(mi_pantalla);</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    mi_pantalla = una_pantalla;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    printf(&quot;\nPantalla inicializada mediante paso por valor. Muestro la pantalla:\n&quot;);</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    for (int32_t i=0; i&lt;mi_pantalla.num_rows ; i++){</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">        for (int32_t j=0; j&lt;mi_pantalla.num_cols; j++){</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">            printf(&quot;(%d,%d,%d) &quot;, mi_pantalla.matriz_RGB[i][j].led_r.estado, mi_pantalla.matriz_RGB[i][j].led_g.estado, mi_pantalla.matriz_RGB[i][j].led_b.estado);</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">        printf(&quot;\n&quot;);</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> (0);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="apantallas_8h_html_a42c1d7f3eba60f3f0ea0c11dc499b837"><div class="ttname"><a href="pantallas_8h.html#a42c1d7f3eba60f3f0ea0c11dc499b837">ilumina_pantalla</a></div><div class="ttdeci">void ilumina_pantalla(pantalla_t *p_pantalla)</div><div class="ttdoc">Turn the pixels of a screen ON.</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8c_source.html#l00079">pantallas.c:79</a></div></div>
+<div class="ttc" id="astructPantalla_html_a10aa7069c5a5006777815ca0796cd1ea"><div class="ttname"><a href="structPantalla.html#a10aa7069c5a5006777815ca0796cd1ea">Pantalla::num_cols</a></div><div class="ttdeci">int32_t num_cols</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8h_source.html#l00093">pantallas.h:93</a></div></div>
+<div class="ttc" id="astructPantalla_html_af2cd02f6ebcb741b2866b50562c4aca3"><div class="ttname"><a href="structPantalla.html#af2cd02f6ebcb741b2866b50562c4aca3">Pantalla::cajon_de_sastre</a></div><div class="ttdeci">void * cajon_de_sastre</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8h_source.html#l00094">pantallas.h:94</a></div></div>
 <div class="ttc" id="aarrays_8h_html_a3aa3d4b4988bb6a5cfad5aefe92c207d"><div class="ttname"><a href="arrays_8h.html#a3aa3d4b4988bb6a5cfad5aefe92c207d">NUM_COLS</a></div><div class="ttdeci">#define NUM_COLS</div><div class="ttdoc">Macro to defines the number of columns of a matrix of pixels.</div><div class="ttdef"><b>Definition:</b> <a href="arrays_8h_source.html#l00040">arrays.h:40</a></div></div>
+<div class="ttc" id="apantallas_8h_html_a80c9bb20c3a685ee09d2b08016508b8b"><div class="ttname"><a href="pantallas_8h.html#a80c9bb20c3a685ee09d2b08016508b8b">inicializa_pantalla</a></div><div class="ttdeci">int32_t inicializa_pantalla(pantalla_t *p_pantalla)</div><div class="ttdoc">Init the pixels of a screen.</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8c_source.html#l00101">pantallas.c:101</a></div></div>
+<div class="ttc" id="astructPantalla_html_a5a6d9e837d57a51839a9f8ea7076f827"><div class="ttname"><a href="structPantalla.html#a5a6d9e837d57a51839a9f8ea7076f827">Pantalla::num_rows</a></div><div class="ttdeci">int32_t num_rows</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8h_source.html#l00092">pantallas.h:92</a></div></div>
+<div class="ttc" id="apantallas_8h_html_aec712977c4e7bfb9ac1d8593a76e6090"><div class="ttname"><a href="pantallas_8h.html#aec712977c4e7bfb9ac1d8593a76e6090">INIT_OK</a></div><div class="ttdeci">#define INIT_OK</div><div class="ttdoc">Macro to indicate that the initialization functions have performed correctly.</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8h_source.html#l00044">pantallas.h:44</a></div></div>
 <div class="ttc" id="aarrays_8h_html_a6019a70994460a660283265dbd136282"><div class="ttname"><a href="arrays_8h.html#a6019a70994460a660283265dbd136282">NUM_ROWS</a></div><div class="ttdeci">#define NUM_ROWS</div><div class="ttdoc">Macro to defines the number of rows of a matrix of pixels.</div><div class="ttdef"><b>Definition:</b> <a href="arrays_8h_source.html#l00039">arrays.h:39</a></div></div>
 <div class="ttc" id="aarrayPunteros_2src_2main_8c_html_a196718f834091385d38586a0ce4009dc"><div class="ttname"><a href="arrayPunteros_2src_2main_8c.html#a196718f834091385d38586a0ce4009dc">main</a></div><div class="ttdeci">int32_t main()</div><div class="ttdoc">Main function of the project &quot;arrayPunteros&quot;. Entry point of the program.</div><div class="ttdef"><b>Definition:</b> <a href="arrayPunteros_2src_2main_8c_source.html#l00035">main.c:35</a></div></div>
-<div class="ttc" id="astructPantalla_html"><div class="ttname"><a href="structPantalla.html">Pantalla</a></div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8h_source.html#l00029">pantallas.h:29</a></div></div>
+<div class="ttc" id="apantallas_8h_html"><div class="ttname"><a href="pantallas_8h.html">pantallas.h</a></div><div class="ttdoc">Header file for the explanation of the use of functions in C.</div></div>
+<div class="ttc" id="astructPantalla_html"><div class="ttname"><a href="structPantalla.html">Pantalla</a></div><div class="ttdoc">Struct type of a screen.</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8h_source.html#l00090">pantallas.h:90</a></div></div>
+<div class="ttc" id="apantallas_8h_html_aee7f19c176695a3a906e74cf28d95cd8"><div class="ttname"><a href="pantallas_8h.html#aee7f19c176695a3a906e74cf28d95cd8">INIT_FAIL</a></div><div class="ttdeci">#define INIT_FAIL</div><div class="ttdoc">Macro to indicate that the initialization functions have failed.</div><div class="ttdef"><b>Definition:</b> <a href="pantallas_8h_source.html#l00045">pantallas.h:45</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_89df6186f44eea04661519cd664ac25f.html">sdg</a></li><li class="navelem"><a class="el" href="dir_d4e481db52069344b2bb511f1111320f.html">projects</a></li><li class="navelem"><a class="el" href="dir_0a377416fd0c88d3c23da9445bd2837d.html">funciones</a></li><li class="navelem"><a class="el" href="dir_304133d036d6c044591c5f99605f2c6a.html">src</a></li><li class="navelem"><b>main.c</b></li>
+    <li class="navelem"><a class="el" href="dir_89df6186f44eea04661519cd664ac25f.html">sdg</a></li><li class="navelem"><a class="el" href="dir_d4e481db52069344b2bb511f1111320f.html">projects</a></li><li class="navelem"><a class="el" href="dir_0a377416fd0c88d3c23da9445bd2837d.html">funciones</a></li><li class="navelem"><a class="el" href="dir_304133d036d6c044591c5f99605f2c6a.html">src</a></li><li class="navelem"><a class="el" href="funciones_2src_2main_8c.html">main.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
