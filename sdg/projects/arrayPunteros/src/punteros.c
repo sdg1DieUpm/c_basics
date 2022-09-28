@@ -85,7 +85,7 @@ void explica_punteros(){
 
 
 	printf("\n/* (8) Aritmetica de punteros */\n");
-    printf("\t- Podemos sumar y restar enteros a un puntero (en Bytes), para que apunten a direcciones de memoria distintas. \n");
+    printf("\t- Podemos sumar y restar enteros a un puntero, para que apunten a direcciones de memoria distintas. \n");
 	printf("\t- Podemos restar punteros para ver la distancia entre elementos de un array.\n");
 	printf("\t- NO SE PUEDEN SUMAR PUNTEROS, NI OTRAS OPERACIONES.\n");
 	

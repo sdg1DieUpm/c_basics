@@ -23,9 +23,9 @@
 #include <stdint.h>
 
 /* INCLUDES PROPIOS */
-//#include "arrays.h"
+#include "arrays.h"
 //#include "strings.h"
-#include "punteros.h"
+//#include "punteros.h"
 
 /**
  * @brief Main function of the project "arrayPunteros". Entry point of the program.

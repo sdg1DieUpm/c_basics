@@ -14,12 +14,16 @@
 		},
 		{
 			"path": "arrayPunteros"
+		},
+		{
+			"path": "funciones"
 		}
 	],
 	"settings": {
 		"files.associations": {
 			"complex.h": "c",
-			"stdint.h": "c"
+			"stdint.h": "c",
+			"stdio.h": "c"
 		}
 	}
 }
